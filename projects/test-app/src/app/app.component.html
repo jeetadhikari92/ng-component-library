@@ -1,0 +1,5 @@
+<div class="container">
+    <ng-voting [data]="data" [styleParams]="styleParams" [isLoading]="isLoading" [showScale]="true" (selected)="increaseVoteCount($event)"></ng-voting>
+</div>
+<button (click)="toggleIsLoading()">Toggle Loading</button>
+

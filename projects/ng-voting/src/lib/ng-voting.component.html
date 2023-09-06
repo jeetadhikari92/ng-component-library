@@ -1,0 +1,16 @@
+<div class="ng-voting" #voting>
+    <div class="ng-voting-question" [class.blur]="isLoading">
+        <span class="ng-voting-question--text">{{data.question}}</span>
+    </div>
+    <div class="ng-voting-options" [class.blur]="isLoading">
+        <div *ngFor="let option of data.options;let i=index;"
+            (click)="voted(option.value)"
+            id="{{i}}"
+            class="ng-voting-options-option">
+            <span class="ng-voting-options-option--text">{{option.label}}</span>
+        </div>
+    </div>
+    <div class="ng-voting-loader" *ngIf="isLoading">
+        <span class="ng-voting-loader-spinner"></span>
+    </div>
+</div>
