@@ -32,6 +32,10 @@ export class AppComponent {
 
   isLoading = false
 
+  increaseVotes(index: number) {
+    this.data.options[index - 1].votesCount++;
+    this.data = {...this.data}
+  }
   toggleIsLoading() {
     return this.isLoading = !this.isLoading;
   }

@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, Renderer2, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, Renderer2 } from '@angular/core';
+import { defaultStyleParams } from './constants';
 import { StyleParams, Voting } from './types';
 
 @Component({
@@ -6,29 +7,20 @@ import { StyleParams, Voting } from './types';
   templateUrl: "ng-voting.component.html",
   styleUrls: ['ng-voting.component.scss']
 })
-export class NgVotingComponent implements OnChanges, AfterViewInit {
-    defaultStyleParams: StyleParams = {
-        backgroundColor: '#ffffff',
-        borderColor: '#d3d3d3',
-        margin: '1rem',
-        hoverColor: '#ebebeb',
-        scaleColor: '#9797dc',
-        fontSize: '1.5rem'
-    }
-    @Input() styleParams: StyleParams = {};
+export class NgVotingComponent implements AfterViewInit {
+    _data!: Voting;
     @Output() selected = new EventEmitter<string>()
-    @Input() data!: Voting;
+    @Input() styleParams: StyleParams = {};
     @Input() isLoading = false;
     @Input() showScale = true
- 
-    constructor(private renderer: Renderer2, private el: ElementRef) {
-    }
-
-    ngOnChanges(changes: SimpleChanges): void {
-        if(changes['data']) {
+    @Input() 
+        get data(): Voting { return this._data; }
+        set data(data: Voting) {
+            this._data = data;
             this.showPercentage()
         }
-    }
+    
+    constructor(private renderer: Renderer2, private el: ElementRef) {}
 
     ngAfterViewInit(): void {
         this.applyStyles()
@@ -36,7 +28,6 @@ export class NgVotingComponent implements OnChanges, AfterViewInit {
 
     voted(value: string) {
         this.selected.emit(value);
-        this.showPercentage() 
     }
 
     showPercentage() {
@@ -68,7 +59,7 @@ export class NgVotingComponent implements OnChanges, AfterViewInit {
     }
 
     applyStyles() {
-        const style = {...this.defaultStyleParams, ...this.styleParams}
+        const style = { ...defaultStyleParams, ...this.styleParams}
         document.documentElement.style.setProperty('--ng-voting-background-color', style.backgroundColor as string)
         document.documentElement.style.setProperty('--ng-voting-border-color', style.borderColor as string)
         document.documentElement.style.setProperty('--ng-voting-margin', style.margin as string)
