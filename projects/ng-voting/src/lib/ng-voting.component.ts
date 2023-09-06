@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, Renderer2, SimpleChanges } from '@angular/core';
 import { defaultStyleParams } from './constants';
 import { StyleParams, Voting } from './types';
 
@@ -7,7 +7,7 @@ import { StyleParams, Voting } from './types';
   templateUrl: "ng-voting.component.html",
   styleUrls: ['ng-voting.component.scss']
 })
-export class NgVotingComponent implements AfterViewInit {
+export class NgVotingComponent implements OnInit, AfterViewInit {
     _data!: Voting;
     @Output() selected = new EventEmitter<string>()
     @Input() styleParams: StyleParams = {};
@@ -22,8 +22,12 @@ export class NgVotingComponent implements AfterViewInit {
     
     constructor(private renderer: Renderer2, private el: ElementRef) {}
 
-    ngAfterViewInit(): void {
+    ngOnInit(): void {
         this.applyStyles()
+    }
+
+    ngAfterViewInit(): void {
+        this.showPercentage()
     }
 
     voted(value: string) {
@@ -67,8 +71,10 @@ export class NgVotingComponent implements AfterViewInit {
         document.documentElement.style.setProperty('--ng-voting-font-size', style.fontSize as string)
         document.documentElement.style.setProperty('--ng-voting-hover-color', style.hoverColor as string)
 
-        const optionsFontSize = parseFloat(style.fontSize?.replace(/[^0-9.]/g, '') as string) * .75 + 'rem' ;
-        document.documentElement.style.setProperty('--ng-voting-options-font-size', optionsFontSize)
+        const smallFontSize = parseFloat(style.fontSize?.replace(/[^0-9.]/g, '') as string) * .75 + 'rem';
+        const smallestFontSize = parseFloat(style.fontSize?.replace(/[^0-9.]/g, '') as string) * .5 + 'rem';
+        document.documentElement.style.setProperty('--ng-voting-font-size-small', smallFontSize)
+        document.documentElement.style.setProperty('--ng-voting-font-size-smallest', smallestFontSize)
     }
 
 }
