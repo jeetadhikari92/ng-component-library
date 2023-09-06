@@ -7,6 +7,7 @@ import { StyleParams, Voting } from 'ng-voting';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   data: Voting =  {
     question: "How are you doing today?",
     options: [
@@ -61,9 +62,14 @@ export class AppComponent {
   }
 
   isLoading = false
+  showUsers = true;
 
   toggleIsLoading() {
-    return this.isLoading = !this.isLoading;
+    this.isLoading = !this.isLoading;
+  }
+
+  toggleShowUser() {  
+    this.showUsers = !this.showUsers;
   }
 
   increaseVoteCount(optionValue: string) {

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, Renderer2, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2 } from '@angular/core';
 import { defaultStyleParams } from './constants';
 import { StyleParams, Voting } from './types';
 
@@ -13,11 +13,12 @@ export class NgVotingComponent implements OnInit, AfterViewInit {
     @Input() styleParams: StyleParams = {};
     @Input() isLoading = false;
     @Input() showScale = true
+    @Input() showUsers = true;
     @Input() 
         get data(): Voting { return this._data; }
         set data(data: Voting) {
             this._data = data;
-            this.showPercentage()
+            this.updateScales()
         }
     
     constructor(private renderer: Renderer2, private el: ElementRef) {}
@@ -27,14 +28,14 @@ export class NgVotingComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit(): void {
-        this.showPercentage()
+        this.updateScales()
     }
 
     voted(value: string) {
         this.selected.emit(value);
     }
 
-    showPercentage() {
+    updateScales() {
         if(this.showScale) {
             const optionElements = this.el.nativeElement.querySelectorAll('.ng-voting-options-option') as HTMLElement[]
             
