@@ -1,8 +1,18 @@
 {
   "name": "ng-voting",
-  "author": "jeetadhikari92",
   "description": "A reusable and customizable voting component for Angular projects",
   "version": "0.0.1",
+  "keywords": ["component", "voting", "ng", "angular"],
+  "author": {
+    "name": "Jeet Adhikari",
+    "email": "jeet.adhikari92@gmail.com",
+    "url": "https://www.linkedin.com/in/jeet-adhikari-645447136/"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/jeetadhikari92/ng-component-library",
+    "type": "git"
+  },
   "peerDependencies": {
     "@angular/common": "^16.2.0",
     "@angular/core": "^16.2.0"
