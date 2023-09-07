@@ -5,7 +5,7 @@
 ## Demo
 
 
-![ng-voting](https://github.com/jeetadhikari92/ng-component-library/assets/39948671/2fc26110-3402-47b7-85cb-3a91b6868b20)
+![ng-voting](https://github.com/jeetadhikari92/ng-component-library/assets/39948671/e4c353e8-b488-4302-af0c-9d9b4b36471d)
 
 
 ## Table of Contents

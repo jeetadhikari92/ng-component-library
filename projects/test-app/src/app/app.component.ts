@@ -9,13 +9,13 @@ import { StyleParams, Voting } from 'ng-voting';
 export class AppComponent {
 
   data: Voting =  {
-    question: "Who is winning the match?",
+    question: "Which one is your favourite?",
     options: [
         {
-            label: "Spain",
-            value: "spain",
+            label: "Angular",
+            value: "angular",
             votesCount: 3,
-            imageUrl: "assets/spain.png",
+            imageUrl: "assets/angular.png",
             users: [
               {
                 name: "John Snow",
@@ -32,10 +32,10 @@ export class AppComponent {
             ]
         },
         {
-            label: "Draw",
-            value: "draw",
+            label: "React",
+            value: "react",
             votesCount: 2,
-            imageUrl: "assets/draw.png",
+            imageUrl: "assets/react.png",
             users: [
               {
                 name: "Will Smith",
@@ -48,10 +48,10 @@ export class AppComponent {
             ]
         },
         {
-            label: "Portugal",
-            value: "portugal",
+            label: "Vue",
+            value: "vue",
             votesCount: 1,
-            imageUrl: "assets/portugal.png",
+            imageUrl: "assets/vue.png",
             users: [
               {
                 name: "Julia Roberts",
