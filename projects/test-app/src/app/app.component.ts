@@ -19,15 +19,15 @@ export class AppComponent {
             users: [
               {
                 name: "John Snow",
-                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80"
+                image: "assets/profile1.jpg"
               },
               {
                 name: "Peter Parker",
-                image: "http://p2w-frontend.s3-website-us-east-1.amazonaws.com/assets/profile.jpg"
+                image: ""
               },
               {
                 name: "Harry Potter",
-                image: "http://p2w-frontend.s3-website-us-east-1.amazonaws.com/assets/profile.jpg"
+                image: ""
               }
             ]
         },
@@ -39,11 +39,11 @@ export class AppComponent {
             users: [
               {
                 name: "Will Smith",
-                image: "http://p2w-frontend.s3-website-us-east-1.amazonaws.com/assets/profile.jpg"
+                image: "assets/profile3.jpg"
               },
               {
                 name: "Harry Potter",
-                image: "http://p2w-frontend.s3-website-us-east-1.amazonaws.com/assets/profile.jpg"
+                image: ""
               }
             ]
         },
@@ -55,7 +55,7 @@ export class AppComponent {
             users: [
               {
                 name: "Julia Roberts",
-                image: "https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3687&q=80"
+                image: "assets/profile2.jpg"
               }
             ]
         }
