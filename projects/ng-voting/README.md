@@ -8,6 +8,15 @@
 https://github.com/jeetadhikari92/ng-component-library/assets/39948671/e7bdfd63-9549-428a-9696-dae8459fffc4
 
 
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Customize](#customize)
+* [API](#api)
+* [Whats next](#whats-next)
+* [Author](#author)
+
+
 ## Installation
 
 ```bash
@@ -163,12 +172,12 @@ styleParams: StyleParams = {
 ```
 
 
-## Whats coming
+## Whats next
 
 - A customization app, where you can try out the component and generate the code for it.
 - More reusable components. 
 
 
-## Authors
+## Author
 
 - [@jeetadhikari92](https://github.com/jeetadhikari92)
