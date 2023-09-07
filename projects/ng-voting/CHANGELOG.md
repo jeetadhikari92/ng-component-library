@@ -9,3 +9,7 @@
 - Added disable input property
 - Added selectedOptionValue input property
 - Updated README file
+
+## 1.2.0
+
+- Converted into standalone component

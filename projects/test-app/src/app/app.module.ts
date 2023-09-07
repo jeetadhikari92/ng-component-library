@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { NgVotingModule } from 'ng-voting'
+import { NgVotingComponent } from 'ng-voting'
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    NgVotingModule
+    NgVotingComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

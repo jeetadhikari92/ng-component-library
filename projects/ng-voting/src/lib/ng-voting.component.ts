@@ -1,3 +1,4 @@
+import { NgForOf, NgIf } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2 } from '@angular/core';
 import { defaultStyleParams } from './constants';
 import { StyleParams, Voting } from './types';
@@ -5,7 +6,12 @@ import { StyleParams, Voting } from './types';
 @Component({
   selector: 'ng-voting',
   templateUrl: "ng-voting.component.html",
-  styleUrls: ['ng-voting.component.scss']
+  styleUrls: ['ng-voting.component.scss'],
+  imports: [
+    NgForOf,
+    NgIf
+  ],
+  standalone: true
 })
 export class NgVotingComponent implements OnInit, AfterViewInit {
     _data!: Voting;

@@ -26,11 +26,11 @@ npm i ng-voting
 
 ## Usage
 
-- Import the `NgVotingModule` in the module of your choice.
+- Import the `NgVotingComponent` in the module of your choice.
 
 ```typescript
 ...
-import { NgVotingModule } from 'ng-voting'
+import { NgVotingComponent } from 'ng-voting'
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { NgVotingModule } from 'ng-voting'
   ],
   imports: [
     ...,
-    NgVotingModule
+    NgVotingComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
