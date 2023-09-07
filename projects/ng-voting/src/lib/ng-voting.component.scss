@@ -4,12 +4,13 @@
     display: flex;
     flex-direction: column;
     font-family: inherit;
-    background-color: var(--ng-voting-background-color);
 
     &-question {
         display: flex;
         align-items: center;
         font-size: var(--ng-voting-font-size);
+        background: var(--ng-voting-topic-bgColor);
+        color: var(--ng-voting-topic-fontColor);
         
         &--text {
             margin: var(--ng-voting-margin);
@@ -19,6 +20,8 @@
     &-options {
         display: flex;
         flex-direction: column;
+        background: var(--ng-voting-options-bgColor);
+        color: var(--ng-voting-options-fontColor);
 
         &-option {
             width: 100%;
@@ -42,6 +45,7 @@
                 content: "";
                 position: absolute;
                 height: 100%;
+                width: 0;
                 background: var(--ng-voting-scale-color);
                 transition: width 0.5s ease;
                 display: flex;
@@ -54,6 +58,15 @@
                 font-size: var(--ng-voting-font-size-small);
                 z-index: 1;
                 margin: var(--ng-voting-margin);;
+            }
+
+            &-img {
+                width: 2rem;
+                z-index: 1;
+                margin-left: 1rem;
+                img {
+                    width: inherit;
+                }
             }
 
             &-user {

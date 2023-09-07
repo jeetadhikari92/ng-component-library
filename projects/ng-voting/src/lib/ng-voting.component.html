@@ -7,7 +7,10 @@
             (click)="voted(option.value)"
             id="{{i}}"
             class="ng-voting-options-option">
+            <div class="ng-voting-options-option-img" *ngIf="option.imageUrl"><img [src]="option.imageUrl" ></div>
             <span class="ng-voting-options-option-text">{{option.label}}</span>
+            <div *ngIf="showScale" class="ng-voting-options-option-scale"></div>
+
             <div class="ng-voting-options-option-user" *ngIf="option.users && option.users.length && showUsers">
                 <div class="ng-voting-options-option-user-avatar">
                     <img class="ng-voting-options-option-user-avatar-img" [src]="option.users[0].image" alt="">

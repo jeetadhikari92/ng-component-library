@@ -9,12 +9,13 @@ import { StyleParams, Voting } from 'ng-voting';
 export class AppComponent {
 
   data: Voting =  {
-    question: "How are you doing today?",
+    question: "Who is winning the match?",
     options: [
         {
-            label: "Good",
-            value: "good",
+            label: "Spain",
+            value: "spain",
             votesCount: 3,
+            imageUrl: "assets/spain.png",
             users: [
               {
                 name: "John Snow",
@@ -31,9 +32,10 @@ export class AppComponent {
             ]
         },
         {
-            label: "Bad",
-            value: "bad",
+            label: "Draw",
+            value: "draw",
             votesCount: 2,
+            imageUrl: "assets/draw.png",
             users: [
               {
                 name: "Will Smith",
@@ -46,9 +48,10 @@ export class AppComponent {
             ]
         },
         {
-            label: "Dont know",
-            value: "dont-know",
+            label: "Portugal",
+            value: "portugal",
             votesCount: 1,
+            imageUrl: "assets/portugal.png",
             users: [
               {
                 name: "Julia Roberts",
@@ -63,6 +66,7 @@ export class AppComponent {
 
   isLoading = false
   showUsers = true;
+  showScale = true;
 
   toggleIsLoading() {
     this.isLoading = !this.isLoading;
@@ -70,6 +74,10 @@ export class AppComponent {
 
   toggleShowUser() {  
     this.showUsers = !this.showUsers;
+  }
+
+  toggleShowScale() {
+    this.showScale = !this.showScale;
   }
 
   increaseVoteCount(optionValue: string) {
@@ -83,5 +91,6 @@ export class AppComponent {
           return value;
       })
     }
+    console.log(this.data)
   }
 }

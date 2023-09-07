@@ -1,9 +1,10 @@
 <div class="container">
-    <ng-voting [data]="data" [styleParams]="styleParams" [showUsers]="showUsers" [isLoading]="isLoading" [showScale]="true" (selected)="increaseVoteCount($event)"></ng-voting>
+    <ng-voting [data]="data" [styleParams]="styleParams" [showScale]="showScale" [showUsers]="showUsers" [isLoading]="isLoading" (selected)="increaseVoteCount($event)"></ng-voting>
 
     <div class="controllers">
         <button (click)="toggleIsLoading()">Toggle Loading</button>
         <button (click)="toggleShowUser()">Toggle Show User</button>
+        <button (click)="toggleShowScale()">Toggle Show Scale</button>
     </div>
 </div>
 

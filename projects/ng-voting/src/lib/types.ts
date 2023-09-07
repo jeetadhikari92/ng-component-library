@@ -7,8 +7,10 @@ export interface Option {
     label: string,
     value: string,
     votesCount: number,
+    imageUrl?: string,
     users?: {name: string, image: string}[],
-    color?: string;
+    color?: string,
+    selected?: boolean,
 }
 
 export interface StyleParams {
@@ -18,5 +20,8 @@ export interface StyleParams {
     hoverColor?: string,
     fontSize?: string,
     scaleColor?: string
-    
+    topicBackgroundColor?: string,
+    optionsBackgroundColor?: string,
+    topicFontColor?: string,
+    optionsFontColor?: string
 }
