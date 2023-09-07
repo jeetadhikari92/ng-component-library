@@ -4,7 +4,8 @@
 
 - Component created
 
-## 1.1.0
+## 1.1.2
 
 - Added disable input property
 - Added selectedOptionValue input property
+- Updated README file
