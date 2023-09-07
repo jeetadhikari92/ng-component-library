@@ -1,24 +1,12 @@
 # NgVoting
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Angular Voting component, that is responsive and customizable.
 
-## Code scaffolding
+## Demo
 
-Run `ng generate component component-name --project ng-voting` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-voting`.
-> Note: Don't forget to add `--project ng-voting` or else it will be added to the default project in your `angular.json` file. 
+https://github.com/jeetadhikari92/ng-component-library/assets/39948671/a0096483-f320-41ad-be39-ebc2c1234c71
 
-## Build
+## Usage
 
-Run `ng build ng-voting` to build the project. The build artifacts will be stored in the `dist/` directory.
+`npm i ng-voting`
 
-## Publishing
-
-After building your library with `ng build ng-voting`, go to the dist folder `cd dist/ng-voting` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ng-voting` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
