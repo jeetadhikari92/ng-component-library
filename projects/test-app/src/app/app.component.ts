@@ -67,6 +67,8 @@ export class AppComponent {
   isLoading = false
   showUsers = true;
   showScale = true;
+  disable = false;
+  selectedOption = ""
 
   toggleIsLoading() {
     this.isLoading = !this.isLoading;
@@ -80,6 +82,10 @@ export class AppComponent {
     this.showScale = !this.showScale;
   }
 
+  toggleDisable() {
+    this.disable = !this.disable;
+  }
+
   increaseVoteCount(optionValue: string) {
     this.data = {
       ...this.data,
@@ -91,6 +97,6 @@ export class AppComponent {
           return value;
       })
     }
-    console.log(this.data)
+    this.selectedOption = optionValue;
   }
 }

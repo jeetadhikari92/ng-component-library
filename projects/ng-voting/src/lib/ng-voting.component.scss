@@ -60,6 +60,10 @@
                 margin: var(--ng-voting-margin);;
             }
 
+            &-checkmark {
+                z-index: 1;
+            }
+
             &-img {
                 width: 2rem;
                 z-index: 1;
@@ -111,8 +115,8 @@
             height: 64px;
             margin: 8px;
             border-radius: 50%;
-            border: 6px solid var(--ng-voting-scale-color);
-            border-color: var(--ng-voting-scale-color) transparent var(--ng-voting-scale-color) transparent;
+            border: 6px solid var(--ng-voting-options-fontColor);
+            border-color: var(--ng-voting-options-fontColor) transparent var(--ng-voting-options-fontColor) transparent;
             animation: spin 1.2s linear infinite;
         }
     }
@@ -120,6 +124,10 @@
 
 .blur {
     filter: blur(3px);
+}
+
+.disabled {
+    background: #b2b2b2;
 }
 
 @keyframes spin {

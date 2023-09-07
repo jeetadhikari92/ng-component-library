@@ -9,7 +9,8 @@
             class="ng-voting-options-option">
             <div class="ng-voting-options-option-img" *ngIf="option.imageUrl"><img [src]="option.imageUrl" ></div>
             <span class="ng-voting-options-option-text">{{option.label}}</span>
-            <div *ngIf="showScale" class="ng-voting-options-option-scale"></div>
+            <span *ngIf="selectedOptionValue === option.value" class="ng-voting-options-option-checkmark">&check;</span>
+            <div *ngIf="showScale" class="ng-voting-options-option-scale" [class.disabled]="disable"></div>
 
             <div class="ng-voting-options-option-user" *ngIf="option.users && option.users.length && showUsers">
                 <div class="ng-voting-options-option-user-avatar">

@@ -11,9 +11,11 @@ export class NgVotingComponent implements OnInit, AfterViewInit {
     _data!: Voting;
     _showScale = true;
     @Output() selected = new EventEmitter<string>()
+    @Input() selectedOptionValue = ""
     @Input() styleParams: StyleParams = {};
     @Input() isLoading = false;
     @Input() showUsers = true;
+    @Input() disable = true;
     @Input() 
         get showScale(): boolean {
             return this._showScale
@@ -42,7 +44,9 @@ export class NgVotingComponent implements OnInit, AfterViewInit {
     }
 
     voted(value: string) {
-        this.selected.emit(value);
+        if(!this.disable) {
+            this.selected.emit(value);
+        }    
     }
 
     updateScales() {
