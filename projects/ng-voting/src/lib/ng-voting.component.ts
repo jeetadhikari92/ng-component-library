@@ -67,9 +67,14 @@ export class NgVotingComponent implements OnInit, AfterViewInit {
         optionElements.forEach((optionElement) => {
             const elementId = optionElement.id
             const width = (this.data.options[parseInt(elementId)].votesCount / totalVotesCount * 100).toFixed(0);
-            let scaleElement = optionElement.querySelector('.ng-voting-options-option-scale') 
+            const bgColor = (this.data.options[parseInt(elementId)].bgColor)
+            const color = (this.data.options[parseInt(elementId)].color)
+            let scaleElement = optionElement.querySelector('.ng-voting-options-option-scale')
+            let textElement = optionElement.querySelector('.ng-voting-options-option-text')
             setTimeout(() => {
                 this.renderer.setStyle(scaleElement, 'width', `${width}%`);
+                this.renderer.setStyle(scaleElement, 'background-color', bgColor);
+                this.renderer.setStyle(textElement, 'color', color);
             }) 
         });  
     }

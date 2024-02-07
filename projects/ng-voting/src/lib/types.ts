@@ -10,6 +10,7 @@ export interface Option {
     imageUrl?: string,
     users?: {name: string, image: string}[],
     color?: string,
+    bgColor?: string,
     selected?: boolean,
 }
 

@@ -1,7 +1,7 @@
 {
   "name": "ng-voting",
   "description": "A reusable and customizable voting component for Angular projects",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "keywords": [
     "component",
     "voting",

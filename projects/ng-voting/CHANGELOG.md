@@ -14,6 +14,10 @@
 
 - Converted into standalone component
 
-## 1.2.1
+## 1.2.1, 1.2.2
 
 - Bugfix - Attempt to update scales only if showScale is enabled
+
+## 1.2.3
+
+- Added color, bgColor option to option elements,[type Option]

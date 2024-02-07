@@ -35,6 +35,8 @@ export class AppComponent {
             label: "React",
             value: "react",
             votesCount: 2,
+            color: 'white',
+            bgColor: 'red',
             imageUrl: "assets/react.png",
             users: [
               {
