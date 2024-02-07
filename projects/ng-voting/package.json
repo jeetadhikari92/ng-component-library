@@ -1,8 +1,13 @@
 {
   "name": "ng-voting",
   "description": "A reusable and customizable voting component for Angular projects",
-  "version": "1.2.0",
-  "keywords": ["component", "voting", "ng", "angular"],
+  "version": "1.2.2",
+  "keywords": [
+    "component",
+    "voting",
+    "ng",
+    "angular"
+  ],
   "author": {
     "name": "Jeet Adhikari",
     "email": "jeet.adhikari92@gmail.com",

@@ -56,6 +56,7 @@ export class NgVotingComponent implements OnInit, AfterViewInit {
     }
 
     updateScales() {
+        if(!this._showScale) return;
         const optionElements = this.el.nativeElement.querySelectorAll('.ng-voting-options-option') as HTMLElement[]
         
         const totalVotesCount = this.data.options.reduce((a, c) =>  {

@@ -13,3 +13,7 @@
 ## 1.2.0
 
 - Converted into standalone component
+
+## 1.2.1
+
+- Bugfix - Attempt to update scales only if showScale is enabled
